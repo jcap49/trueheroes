@@ -33,28 +33,30 @@
 
 #incomplete-pledge {
   position: relative;
-  height: 200%;
-  width: 200%;
+  height: 300%;
+  width: 100%;
   margin-top: 40%;
   margin-left: -70%;
   background-color: #ED3324;
+  form {
+    color: #F7EBD1;
+  }
+  form label {
+    display: none;
+  }
 }
 
-#incomplete-pledge q {
-  font-size: 200%;
-}
-#incomplete-pledge form {
-  color: #F7EBD1;
-}
-
-#incomplete-pledge form label {
-  display: none;
+#i {
+  float: left;
+  margin-left: -50%;
+  margin-top: 34%;
+  font-size: 250%;
 }
 
 #first_name {
   position: relative;
   float: left;
-  margin-left: 35%;
+  margin-left: 20%;
   height: 50%;
   width: 20%;
 }
@@ -62,13 +64,41 @@
 #last_name {
   position: relative;
   float: right;
-  margin-right: 5%;
+  margin-right: 20%;
   height: 50%;
   width: 30%;
+}
+
+#pledge-to {
+  float: left;
+  margin-top: 2%;
+  margin-left: -35%;
+  font-size: 250%;
+}
+
+#activity input {
+  float: right;
+  margin-top: 2%;
+  margin-right: 5%;
+  width: 35%;
+}
+
+#by {
+  float: left;
+  margin-top: -30%;
+  margin-left: 50%;
+  font-size: 250%;
+
 }
 
 #date {
   position: relative;
   width: 10%;
-
 }
+
+#email {
+  margin: auto;
+  width: 50%;
+}
+
+

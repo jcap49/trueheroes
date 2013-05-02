@@ -10,8 +10,9 @@
       </ul>
     </div>
   <% end %>
-  I
+
   <div class="field" id="first_name">
+    <p id="i">I</p>
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
   </div>
@@ -19,13 +20,15 @@
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name %>
   </div>
-  pledge to
+
   <div class="field" id="activity">
+    <p id="pledge-to">pledge to</p>
     <%= f.label :activity %><br />
     <%= f.text_field :activity %>
   </div>
-  by
+
   <div class="field" id="date">
+    <p id="by">by</p>
     <%= f.label :date %><br />
     <%= f.date_select :date %>
   </div>
