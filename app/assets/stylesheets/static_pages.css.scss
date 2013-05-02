@@ -1,3 +1,74 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#home-row {
+  position: absolute;
+}
+
+#header {
+  margin-left: -95%;
+}
+
+#header a {
+  color: #ED3324;
+}
+
+#header a:hover {
+  color: #FC4435;
+}
+
+#cta {
+  width: 100%;
+  margin-top: 5%;
+  margin-left: 50%;
+}
+
+#cta p {
+  font-size: 500%;
+  line-height: 105%;
+  letter-spacing: 50%;
+  font-family: 'Basic', sans-serif;
+}
+
+#incomplete-pledge {
+  position: relative;
+  height: 200%;
+  width: 200%;
+  margin-top: 40%;
+  margin-left: -70%;
+  background-color: #ED3324;
+}
+
+#incomplete-pledge q {
+  font-size: 200%;
+}
+#incomplete-pledge form {
+  color: #F7EBD1;
+}
+
+#incomplete-pledge form label {
+  display: none;
+}
+
+#first_name {
+  position: relative;
+  float: left;
+  margin-left: 35%;
+  height: 50%;
+  width: 20%;
+}
+
+#last_name {
+  position: relative;
+  float: right;
+  margin-right: 5%;
+  height: 50%;
+  width: 30%;
+}
+
+#date {
+  position: relative;
+  width: 10%;
+
+}

@@ -1,1 +1,19 @@
-<h1>TrueHeroes</h1>
+<div class="row" id"home-row">
+  <div class="large-5 columns">
+   <div id="header">
+      <h2><%= link_to "TrueHero.es", root_url %></h2>
+   </div>
+   <div id="incomplete-pledge">
+    <%= render 'pledges/form', :locals => {:pledge => Pledge.new} %>
+   </div>
+  </div>
+ <div class="large-7 columns">
+  <div id="cta">
+    <p>What have you done to thank your true hero?</p>
+  </div>
+  <div id="complete-pledge">
+
+  </div>
+ </div>
+</div>
+

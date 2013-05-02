@@ -10,24 +10,34 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  I
+  <div class="field" id="first_name">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
   </div>
-  <div class="field">
+  <div class="field" id="last_name">
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name %>
   </div>
-  <div class="field">
+  pledge to
+  <div class="field" id="activity">
     <%= f.label :activity %><br />
     <%= f.text_field :activity %>
   </div>
-  <div class="field">
+  by
+  <div class="field" id="date">
     <%= f.label :date %><br />
     <%= f.date_select :date %>
   </div>
+
+  <div class="field" id="email">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
 <% end %>

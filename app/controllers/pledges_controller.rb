@@ -1,17 +1,14 @@
 class PledgesController < ApplicationController
-  # GET /pledges
-  # GET /pledges.json
+
   def index
     @pledges = Pledge.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.json { render json: @pledges }
     end
   end
 
-  # GET /pledges/1
-  # GET /pledges/1.json
   def show
     @pledge = Pledge.find(params[:id])
 
@@ -21,8 +18,6 @@ class PledgesController < ApplicationController
     end
   end
 
-  # GET /pledges/new
-  # GET /pledges/new.json
   def new
     @pledge = Pledge.new
 
@@ -32,13 +27,10 @@ class PledgesController < ApplicationController
     end
   end
 
-  # GET /pledges/1/edit
   def edit
     @pledge = Pledge.find(params[:id])
   end
 
-  # POST /pledges
-  # POST /pledges.json
   def create
     @pledge = Pledge.new(params[:pledge])
 
@@ -53,8 +45,6 @@ class PledgesController < ApplicationController
     end
   end
 
-  # PUT /pledges/1
-  # PUT /pledges/1.json
   def update
     @pledge = Pledge.find(params[:id])
 
@@ -69,8 +59,6 @@ class PledgesController < ApplicationController
     end
   end
 
-  # DELETE /pledges/1
-  # DELETE /pledges/1.json
   def destroy
     @pledge = Pledge.find(params[:id])
     @pledge.destroy
