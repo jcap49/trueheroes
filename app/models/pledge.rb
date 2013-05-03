@@ -1,7 +1,9 @@
 class Pledge < ActiveRecord::Base
 
   #attrs
-  attr_accessible :activity, :date, :first_name, :last_name, :email
+  attr_accessible :activity, :date, :first_name, :last_name, :email, :profile_picture
+
+  belongs_to :user
 
   #validators
   validates :first_name, presence: true

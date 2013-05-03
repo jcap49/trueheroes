@@ -4,6 +4,8 @@ gem 'rails', '3.2.12'
 gem 'pg'
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'devise'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

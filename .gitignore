@@ -15,4 +15,4 @@
 /tmp
 
 # Ignore provider keys
-/config/initializers/twitter_constants.rb
+/config/initializers/constants.rb
