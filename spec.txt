@@ -1,0 +1,32 @@
+TrueHeroes - Spec (5/5-5/12)
+
+To-do:
+-finish implementing Facebook Oauth:
+  -fix omniauth callbacks controller
+  -fix redirect location
+  -grab image for pledge profile
+  -add fb button
+-implement Twitter Oauth
+  -add proper methods to omniauth callbacks controller & user.rb
+  -grab image for pledge profile
+  -add twitter button
+-front-end implementation
+  -homepage
+    -fix pledge form
+    -add completed pledge example
+      -implement animation
+    -add footer
+    -add header/menu?
+  -individual pledge page
+    -implement basic layout/markup
+    -add css
+  -gallery
+    -finalize design
+    -implement layout/markup
+
+
+Done:
+
+-fix omniauth callbacks controller (fb oauth)
+
+

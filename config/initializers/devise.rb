@@ -239,9 +239,12 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = "/my_engine/users/auth"
 
 
+  # Facebook/Twitter Oauth shit
+
   require 'omniauth-facebook'
-  config.omniauth :facebook, "481087998631394", "a50aa05ee28d5a7c3285eb8fea5d6467"
+  config.omniauth :facebook, 'FACEBOOK_DEV', 'FACEBOOK_DEV_SECRET'
 
   require 'omniauth-twitter'
-  config.omniauth :twitter
+  config.omniauth :twitter, 'TWITTER_CONSUMER_KEY', 'TWITTER_CONSUMER_SECRET'
+
 end
