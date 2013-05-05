@@ -16,4 +16,4 @@
 
 # Ignore provider keys
 /config/initializers/constants.rb
-/config/initializers/omniauth.rb
+

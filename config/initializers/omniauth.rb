@@ -1,7 +1,7 @@
 if Rails.env == 'development' || Rails.env == 'test'
   Rails.application.config.middleware.use OmniAuth::Builder do
-    provider :facebook, "483104801760721", "7e581795f88fbb34c10782be4dfbf499"
-    provider :twitter, "J1nYi1ddOI8YVYyartye8A", "kQtGqAJVilPzPIgA4nXbolylbAJj0SP04xhEJSbk8"
+    provider :facebook
+    provider :twitter
   end
 else
   # Production
