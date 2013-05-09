@@ -2,10 +2,15 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 gem 'pg'
+gem 'thin'
+gem 'paperclip', '3.4.1'
 gem 'omniauth'
 gem 'omniauth-twitter'
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '1.4.0'
 gem 'devise'
+gem 'twitter'
+gem 'fb_graph'
+gem 'nifty-generators'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -16,7 +21,10 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
+  gem 'quiet_assets'
 end
 
 
 gem 'jquery-rails'
+
+gem "mocha", :group => :test

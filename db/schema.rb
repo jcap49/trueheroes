@@ -11,17 +11,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130503184637) do
+ActiveRecord::Schema.define(:version => 20130509221830) do
+
+  create_table "linked_services", :force => true do |t|
+    t.integer  "user_id"
+    t.text     "meta"
+    t.string   "provider",   :null => false
+    t.string   "uid",        :null => false
+    t.string   "token",      :null => false
+    t.string   "secret"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "linked_services", ["user_id", "provider"], :name => "index_linked_services_on_user_id_and_provider", :unique => true
+  add_index "linked_services", ["user_id"], :name => "index_linked_services_on_user_id"
 
   create_table "pledges", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "activity"
     t.date     "date"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "email"
-    t.string   "profile_picture"
+    t.string   "photo"
     t.integer  "user_id"
   end
 
@@ -38,6 +52,13 @@ ActiveRecord::Schema.define(:version => 20130503184637) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.string   "name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

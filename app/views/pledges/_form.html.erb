@@ -11,36 +11,40 @@
     </div>
   <% end %>
 
+
+  <div class="profile-picture"></div>
+
+<!-- some image; border-radius: 250px -->
   <div class="field" id="first_name">
     <p id="i">I</p>
     <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, placeholder: 'First name' %>
   </div>
   <div class="field" id="last_name">
     <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, placeholder: 'Last name' %>
   </div>
 
   <div class="field" id="activity">
     <p id="pledge-to">pledge to</p>
     <%= f.label :activity %><br />
-    <%= f.text_field :activity %>
+    <%= f.text_field :activity, placeholder: 'Some gracious activity' %>
   </div>
 
   <div class="field" id="date">
     <p id="by">by</p>
     <%= f.label :date %><br />
-    <%= f.date_select :date %>
+    <%= f.date_select :date, placeholder: 'Date' %>
   </div>
+
+  <p id="thank">to thank my true hero.</p>
 
   <div class="field" id="email">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, placeholder: 'Your email' %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "button" %>
   </div>
-
-
 <% end %>

@@ -1,0 +1,20 @@
+<h1>Settings / Services</h1>
+
+<!-- TODO use named routes when possible -->
+<div class="tabbable">
+    <ul class="nav nav-tabs">
+        <li><a href="/settings">You</a></li>
+        <li><a href="/settings/photo">Photo</a></li>
+        <li class="active"><a href="/settings/services">Services</a></li>
+        <li><a href="/settings/notifications">Notifications</a></li>
+    </ul>
+</div>
+
+<% LinkedService::PROVIDERS.each do |p| %>
+    <% if current_user.has_service?(p) %>
+        <%= link_to "Disconnect #{p}", remove_linked_service_path(p), method: :delete %>
+    <% else %>
+        <%= link_to "Connect #{p}", "/auth/#{p}" %>
+    <% end %>
+    <br>
+<% end %>
