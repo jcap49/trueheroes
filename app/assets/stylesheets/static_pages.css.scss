@@ -7,7 +7,10 @@
 }
 
 #header {
-
+  margin: auto;
+  h1, h2{
+    text-align: center;
+  }
 }
 
 #header a {
@@ -16,34 +19,24 @@
 
 #header a:hover {
   color: #FC4435;
-
-// pledge example styling
-#complete-pledge {
-  margin-left: 25%;
-  background-color: #ED3324;
-  color: #F7EBD1;
-  height: 325px;
-  width: 325px;
-  border-radius: 5px;
-  p{
-    font-size: 200%;
-    line-height: 35px;
-  }
 }
+
+
 
 // to be completed pledge styling
 
 
-#incomplete-pledge {
-  position: relative;
-  height: 300%;
+.pledge-form {
+  height: 100%;
   width: 100%;
-  margin-top: 36%;
-  margin-left: -40%;
   background-color: #ED3324;
   border-radius: 5px;
+  div input {
+    display: inline-block;
+  }
   p {
-    font-size: 250%;
+    font-size: 150%;
+    display: inline;
   }
   form {
     color: #F7EBD1;
@@ -76,30 +69,33 @@
 
 }
 
-#first_name {
+#name {
   height: 50%;
-  width: 25%;
+  width: 20%;
+
+  p {
+    margin-top: 10%;
+    margin-left: 15%;
+    display: inline;
+  }
+  input {
+    margin-top: -10%;
+    margin-left: 25%;
+    display: inline-block;
+  }
 }
 
-#last_name {
-  height: 50%;
-  width: 30%;
-}
 
 #pledge-to {
+
 }
 
 #activity input {
-  float: right;
-  margin-top: 2%;
-  margin-right: 5%;
   width: 35%;
 }
 
 #by {
-  float: left;
-  margin-top: -30%;
-  margin-left: 50%;
+
 }
 
 #date {
@@ -108,13 +104,12 @@
 }
 
 #thank {
-  display: inline-block;
-  line-height: 30px;
+
 }
 
 #email {
-  margin: auto;
-  width: 50%;
+  width: 25%;
+
 }
 
 

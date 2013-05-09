@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130509221830) do
+ActiveRecord::Schema.define(:version => 20130509224026) do
 
   create_table "linked_services", :force => true do |t|
     t.integer  "user_id"
@@ -28,8 +28,7 @@ ActiveRecord::Schema.define(:version => 20130509221830) do
   add_index "linked_services", ["user_id"], :name => "index_linked_services_on_user_id"
 
   create_table "pledges", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "name"
     t.string   "activity"
     t.date     "date"
     t.datetime "created_at", :null => false

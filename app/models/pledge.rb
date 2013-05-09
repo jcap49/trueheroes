@@ -1,7 +1,7 @@
 class Pledge < ActiveRecord::Base
 
   #attrs
-  attr_accessible :activity, :date, :first_name, :last_name, :email, :photo
+  attr_accessible :activity, :date, :name, :email, :photo
 
   belongs_to :user
 

@@ -9,8 +9,6 @@ class User < ActiveRecord::Base
     :large => "525x525>"}
 
   has_many :pledges
-  has_many :authentications
-
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
