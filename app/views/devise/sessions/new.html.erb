@@ -1,4 +1,4 @@
 <h2>Sign in</h2>
-<% LinkedService::PROVIDERS.each do |p| %>
-<%= link_to p, "/auth/#{p}" %>
-<% end %>
+
+<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+<%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>

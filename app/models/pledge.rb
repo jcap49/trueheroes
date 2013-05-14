@@ -6,8 +6,7 @@ class Pledge < ActiveRecord::Base
   belongs_to :user
 
   #validators
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  validates :name, presence: true
   validates :date, presence: true
   validates :activity, presence: true
   validates :email, presence: true

@@ -31,12 +31,15 @@
   width: 100%;
   background-color: #ED3324;
   border-radius: 5px;
-  div input {
-    display: inline-block;
-  }
   p {
-    font-size: 150%;
-    display: inline;
+    display: inline-block;
+    font-size: 250%;
+    clear: both;
+  }
+  input {
+    display: inline-block;
+    width: 20%;
+    clear: both;
   }
   form {
     color: #F7EBD1;
@@ -66,50 +69,34 @@
 }
 
 #i {
-
+  margin-left: 10%;
 }
 
-#name {
-  height: 50%;
-  width: 20%;
-
-  p {
-    margin-top: 10%;
-    margin-left: 15%;
-    display: inline;
-  }
-  input {
-    margin-top: -10%;
-    margin-left: 25%;
-    display: inline-block;
-  }
+#pledge_name {
+  margin-left: 10%;
 }
-
 
 #pledge-to {
-
+  margin-left: 50%;
 }
 
-#activity input {
-  width: 35%;
+#pledge_activity {
+  float: right;
+  margin-right: 20%;
+  margin-top: -4.5%;
 }
 
 #by {
-
+  margin-left: 30%;
 }
 
-#date {
-
-  width: 20%;
+#pledge_date {
+  margin-left: 10%;
 }
 
-#thank {
-
+#pledge_email {
+  margin-left: 40%;
 }
 
-#email {
-  width: 25%;
-
-}
 
 

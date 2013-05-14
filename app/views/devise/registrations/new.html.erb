@@ -1,27 +1,4 @@
-<% unless @svc %>
-    <h2>Sign up</h2>
-    <% LinkedService::PROVIDERS.each do |p| %>
-    <%= link_to p, "users/auth/#{p}" %>
-    <% end %>
-<% else %>
-    <h2>Finish Sign up</h2>
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
+<h3>Sign up</h3>
 
-      <div><%= f.text_field :first_name, placeholder: 'First name' %></div>
-      <div><%= f.text_field :last_name, placeholder: 'Last name' %></div>
-
-      <div><%= f.file_field :photo %></div>
-
-      <div><%= f.label :email %><br />
-      <%= f.email_field :email %></div>
-
-      <div><%= root_url %><%= f.text_field :username, placeholder: 'you' %></div>
-
-      <% if @svc.provider == 'twitter' %>
-      <div><%= f.check_box :twitter_follow %> Follow @<%= TWITTER_ACCOUNT %></div>
-      <% end %>
-
-      <div><%= f.submit "Sign up" %></div>
-    <% end %>
-<% end %>
+<%= link_to "Sign up with Facebook", user_omniauth_authorize_path(:facebook) %>
+<%= link_to "Sign up with Twitter", user_omniauth_authorize_path(:twitter) %>

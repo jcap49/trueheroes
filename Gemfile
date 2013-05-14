@@ -11,6 +11,7 @@ gem 'devise'
 gem 'twitter'
 gem 'fb_graph'
 gem 'nifty-generators'
+gem 'jquery_datepicker'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -22,6 +23,8 @@ end
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
   gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 
