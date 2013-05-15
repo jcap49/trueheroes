@@ -13,8 +13,7 @@
 
 <% @pledges.each do |pledge| %>
   <tr>
-    <td><%= pledge.first_name %></td>
-    <td><%= pledge.last_name %></td>
+    <td><%= pledge.name %></td>
     <td><%= pledge.activity %></td>
     <td><%= pledge.date %></td>
     <td><%= link_to 'Show', pledge %></td>
