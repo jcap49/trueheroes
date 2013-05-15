@@ -1,3 +1,89 @@
 // Place all the styles related to the Pledges controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// pledges - general styling
+
+.pledge-form, .pledge {
+  height: 100%;
+  width: 100%;
+  background-color: #ED3324;
+  border-radius: 5px;
+  p {
+    display: inline-block;
+
+  }
+  input {
+    display: inline-block;
+    width: 20%;
+
+  }
+  form {
+    color: #F7EBD1;
+
+  }
+  form label {
+    display: none;
+  }
+  .button {
+    color: #ED3324;
+    background-color: #F7EBD1;
+    border-color: #DBD0B8;
+    margin: auto;
+    display: block;
+  }
+
+  .button:hover {
+    background-color: #DBD0B8;
+  }
+}
+
+.profile-picture {
+  width: 75px;
+  height: 75px;
+  border-radius: 250px;
+  background-color: #F7EBD1;
+  margin: auto;
+}
+
+// pledge form-specific styling
+
+#i {
+  margin-left: 10%;
+}
+
+#pledge_name {
+  margin-left: 10%;
+}
+
+#pledge-to {
+  margin-left: 50%;
+}
+
+#pledge_activity {
+  float: right;
+  margin-right: 20%;
+  margin-top: -4.5%;
+}
+
+#by {
+  margin-left: 30%;
+}
+
+#pledge_date {
+  margin-left: 10%;
+}
+
+#pledge_email {
+  margin-left: 40%;
+}
+
+// pledge-specific styling
+
+.pledge {
+  p {
+    font-size: 250%;
+    line-height: 40px;
+  }
+}
+

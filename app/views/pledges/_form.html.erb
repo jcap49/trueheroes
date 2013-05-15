@@ -1,24 +1,26 @@
-<%= form_for(@pledge) do |f| %>
-  <% if @pledge.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@pledge.errors.count, "error") %> prohibited this pledge from being saved:</h2>
+<div class="pledge-form">
+  <%= form_for(@pledge) do |f| %>
+    <% if @pledge.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@pledge.errors.count, "error") %> prohibited this pledge from being saved:</h2>
 
-      <ul>
-      <% @pledge.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+        <ul>
+        <% @pledge.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="profile-picture"></div>
+    <p id="i">I</p>
+    <%= f.text_field :name, placeholder: 'Name' %> <br>
+    <p id="pledge-to">pledge to</p>
+    <%= f.text_field :activity, placeholder: 'Some gracious activity' %> <br>
+    <p id="by">by</p>
+    <%= f.datepicker :date, placeholder: 'Date' %> <br>
+    <%= f.text_field :email, placeholder: 'Your email' %> <br>
+    <%= f.submit class: "button" %>
+
   <% end %>
-
-  <div class="profile-picture"></div>
-  <p id="i">I</p>
-  <%= f.text_field :name, placeholder: 'Name' %> <br>
-  <p id="pledge-to">pledge to</p>
-  <%= f.text_field :activity, placeholder: 'Some gracious activity' %> <br>
-  <p id="by">by</p>
-  <%= f.datepicker :date, placeholder: 'Date' %> <br>
-  <%= f.text_field :email, placeholder: 'Your email' %> <br>
-  <%= f.submit class: "button" %>
-
-<% end %>
+</div>

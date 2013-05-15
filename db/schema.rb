@@ -11,21 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130509224026) do
-
-  create_table "linked_services", :force => true do |t|
-    t.integer  "user_id"
-    t.text     "meta"
-    t.string   "provider",   :null => false
-    t.string   "uid",        :null => false
-    t.string   "token",      :null => false
-    t.string   "secret"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "linked_services", ["user_id", "provider"], :name => "index_linked_services_on_user_id_and_provider", :unique => true
-  add_index "linked_services", ["user_id"], :name => "index_linked_services_on_user_id"
+ActiveRecord::Schema.define(:version => 20130515160743) do
 
   create_table "pledges", :force => true do |t|
     t.string   "name"

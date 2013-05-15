@@ -19,8 +19,12 @@ class User < ActiveRecord::Base
          uid:auth.uid,
          email:auth.info.email,
          password:Devise.friendly_token[0,20])
+      # session[:pledge_id] = user.id
+      # User.find(session[:pledge_id])
     end
     user
+    # session[:pledge_id] = user.id
+    # User.find(session[:pledge_id])
   end
 
   def self.new_with_session(params, session)
@@ -34,7 +38,8 @@ class User < ActiveRecord::Base
   def self.find_for_twitter_oauth(access_token, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
     unless user
-      user = User.create(name:auth.extra.raw_info.name,
+      user = User.create(
+        name:auth.extra.raw_info.name,
         provider:auth.provider,
         uid:auth.uid,
         email:auth.info.email,

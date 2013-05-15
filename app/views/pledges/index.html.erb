@@ -1,28 +1,17 @@
-<h1>Listing pledges</h1>
-
-<table>
-  <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Activity</th>
-    <th>Date</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h3>Your Pledges</h3>
 
 <% @pledges.each do |pledge| %>
-  <tr>
-    <td><%= pledge.name %></td>
-    <td><%= pledge.activity %></td>
-    <td><%= pledge.date %></td>
-    <td><%= link_to 'Show', pledge %></td>
-    <td><%= link_to 'Edit', edit_pledge_path(pledge) %></td>
-    <td><%= link_to 'Destroy', pledge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <p>
+    <strong><%= link_to "Pledge created on #{pledge.created_at.strftime("%d %B. %Y")}" %></strong>
+    <%= link_to 'Edit', edit_pledge_path(pledge) %>
+    <%= link_to 'Delete', pledge_path("#{pledge.id}"), method: :delete, data: { confirm: 'Are you sure you want to delete your pledge?' } %>
+  </p>
 <% end %>
-</table>
+<br>
+<%= link_to 'New Pledge', new_pledge_path %>
+<br>
+<br>
 
 <br />
 
-<%= link_to 'New Pledge', new_pledge_path %>
+

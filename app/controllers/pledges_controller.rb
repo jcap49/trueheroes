@@ -1,12 +1,9 @@
 class PledgesController < ApplicationController
+  before_filter :authenticate_user!, only: [:edit, :index, :destroy]
 
   def index
-    @pledges = Pledge.all
-
-    respond_to do |format|
-      format.html
-      format.json { render json: @pledges }
-    end
+    @pledges = current_user.pledges
+    @users = User.all
   end
 
   def show
@@ -32,15 +29,22 @@ class PledgesController < ApplicationController
   end
 
   def create
-    @pledge = Pledge.new(params[:pledge])
-
-    respond_to do |format|
+    if user_signed_in?
+      @pledge = current_user.pledges.build(params[:pledge])
       if @pledge.save
-        format.html { redirect_to @pledge, notice: 'Pledge was successfully created.' }
-        format.json { render json: @pledge, status: :created, location: @pledge }
+        redirect_to @pledge, notice: 'pledge was successfully created.'
       else
-        format.html { render action: "new" }
-        format.json { render json: @pledge.errors, status: :unprocessable_entity }
+        render new_pledge_path
+      end
+    else
+      @pledge = Pledge.new(params[:pledge])
+      @pledge.user_id = -1
+      session[:pledge_id] = Pledge.find_by_id(params[:id])
+
+      if @pledge.save
+        redirect_to new_user_session_path
+      else
+        render new_pledge_path
       end
     end
   end

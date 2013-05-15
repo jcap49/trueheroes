@@ -1,9 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  I, <%= @pledge.name %>, pledge to <%= @pledge.activity %> by <%= @pledge.date %>
-</p>
-
+<%= render 'layouts/pledge' %>
 
 <%= link_to 'Edit', edit_pledge_path(@pledge) %> |
 <%= link_to 'Back', pledges_path %>
