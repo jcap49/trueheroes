@@ -3,6 +3,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     user = User.find_for_facebook_oauth(request.env["omniauth.auth"])
 
     if user.persisted?
+      @pledge = Pledge.find_by_id(session[:pledge_id])
+      @pledge.user_id = user.id
+      @pledge.save
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Facebook"
       sign_in_and_redirect user, :event => :authentication
     else
@@ -20,6 +23,15 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     else
       session["devise.github_data"] = request.env["omniauth.auth"]
       redirect_to new_user_registration_url
+    end
+  end
+
+  def assign_pledge
+    if session[:pledge_id] != nil
+      @pledge = Pledge.find_by_id(session[:pledge_id])
+      @pledge.user_id = user.id
+    else
+      return
     end
   end
 end

@@ -14,17 +14,21 @@ class User < ActiveRecord::Base
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
     unless user
       user = User.create(
-         name:auth.extra.raw_info.name,
          provider:auth.provider,
          uid:auth.uid,
          email:auth.info.email,
          password:Devise.friendly_token[0,20])
-      # session[:pledge_id] = user.id
-      # User.find(session[:pledge_id])
     end
     user
-    # session[:pledge_id] = user.id
-    # User.find(session[:pledge_id])
+  end
+
+  def assign_pledge
+    if @stored_pledge_id != nil
+      @pledge = Pledge.find_by_id(@stored_pledge_id)
+      @pledge.user_id = user.id
+    else
+      return
+    end
   end
 
   def self.new_with_session(params, session)

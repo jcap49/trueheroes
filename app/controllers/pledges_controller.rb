@@ -39,9 +39,9 @@ class PledgesController < ApplicationController
     else
       @pledge = Pledge.new(params[:pledge])
       @pledge.user_id = -1
-      session[:pledge_id] = Pledge.find_by_id(params[:id])
 
       if @pledge.save
+        session[:pledge_id] = @pledge.id
         redirect_to new_user_session_path
       else
         render new_pledge_path
