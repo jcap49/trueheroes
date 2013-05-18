@@ -32,7 +32,7 @@ class PledgesController < ApplicationController
     if user_signed_in?
       @pledge = current_user.pledges.build(params[:pledge])
       if @pledge.save
-        redirect_to @pledge, notice: 'pledge was successfully created.'
+        redirect_to pledge_path(@pledge.id), notice: 'pledge was successfully created.'
       else
         render new_pledge_path
       end
