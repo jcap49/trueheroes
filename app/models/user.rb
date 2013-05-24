@@ -22,15 +22,6 @@ class User < ActiveRecord::Base
     user
   end
 
-  def assign_pledge
-    if @stored_pledge_id != nil
-      @pledge = Pledge.find_by_id(@stored_pledge_id)
-      @pledge.user_id = user.id
-    else
-      return
-    end
-  end
-
   def self.new_with_session(params, session)
     super.tap do |user|
       if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
