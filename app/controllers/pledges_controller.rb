@@ -2,7 +2,7 @@ class PledgesController < ApplicationController
   before_filter :authenticate_user!, only: [:edit, :index, :destroy]
 
   def index
-    @pledges = current_user.pledges
+    @pledges = current_user.pledges.order("created_at DESC")
     @users = User.all
   end
 
@@ -42,7 +42,7 @@ class PledgesController < ApplicationController
 
       if @pledge.save
         session[:pledge_id] = @pledge.id
-        redirect_to new_user_session_path
+        redirect_to new_user_registration_path
       else
         render new_pledge_path
       end
