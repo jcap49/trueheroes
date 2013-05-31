@@ -2,28 +2,73 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+// home
+
 #home-row {
   position: absolute;
 }
 
-#header {
+.header {
   margin: auto;
   h1, h2{
     text-align: center;
   }
 }
 
-#header a {
+.header a {
   color: #ED3324;
 }
 
-#header a:hover {
+.header a:hover {
   color: #FC4435;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+// sign in
+
+.facebook {
+  float: left;
+  margin-left: 140px;
+
+  .button {
+    color: #ED3324;
+    background-color: #F7EBD1;
+    border-color: #DBD0B8;
+    margin: auto;
+    display: block;
+  }
+
+  .button:hover {
+    background-color: #DBD0B8;
+  }
+
+}
+
+.twitter {
+  float: right;
+  margin-right: 140px;
+
+  .button {
+    color: #ED3324;
+    background-color: #F7EBD1;
+    border-color: #DBD0B8;
+    margin: auto;
+    display: block;
+  }
+
+  .button:hover {
+    background-color: #DBD0B8;
+  }
 }
 
 
 
-// to be completed pledge styling
+
+
 
 
 

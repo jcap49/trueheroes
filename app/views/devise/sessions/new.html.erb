@@ -1,4 +1,12 @@
-<h3>Sign in</h3>
+<div class="header">
+  <h1><%= link_to "TrueHero.es", root_url %></h1>
+</div>
 
-<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), class: "button" %>
-<%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter), class: "button" %>
+<div class="facebook">
+  <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), class: "button" %>
+</div>
+
+<div class="twitter">
+  <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter), class: "button" %>
+</div>
+
